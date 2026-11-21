@@ -1,0 +1,166 @@
+:root {
+    --bg: #080B08;
+    --card: #111811;
+    --card2: #19251C;
+    --line: #293D2E;
+    --text: #F1F5F1;
+    --muted: #9BA99D;
+    --green: #16A34A;
+    --light: #22C55E;
+    --gold: #A3E635;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 6%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 30px;
+}
+
+.title span { color: var(--light); }
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+.btns {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.btns:hover { color: var(--light); }
+
+section { margin-bottom: 30px; }
+
+section > h2 { margin-bottom: 15px; }
+
+.portfolio-card, .card3, .card, .stock-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.portfolio-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.portfolio-card div {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
+}
+
+.portfolio-card div:last-child {
+    border: none;
+    padding: 0;
+}
+
+.portfolio-card h3 {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.portfolio-card p {
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title {
+    color: white;
+    text-shadow: 
+    0 0 10px rgb(71, 233, 71),
+    0 0 10px rgb(71, 233, 71),
+    0 0 10px rgb(71, 233, 71),
+    0 0 10px rgb(71, 233, 71),
+    0 0 10px rgb(71, 233, 71),
+    0 0 10px rgb(71, 233, 71),
+    0 0 10px rgb(71, 233, 71);
+    font-size: 40px;
+}
+
+.card3 h2, .card h3, .stock-card h3 {
+    color: var(--light);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card p, .card3 p, .stock-card p {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.stock-card h2 {
+    color: var(--gold);
+}
+
+.stock-card input {
+    width: 60px;
+    padding: 8px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.stock-card:hover {
+    transform: translateY(-4px);
+}
+
+button {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    margin: 4px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover { background: var(--light); color: var(--bg); }
+
+#message, #tradeMessage {
+    color: var(--light);
+    font-weight: bold;
+}
+
+#News .card {
+    border-left: 3px solid var(--green);
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid var(--line);
+    padding: 15px;
+    color: var(--muted);
+}
+
+@media (max-width: 700px) {
+    body { padding: 15px; }
+    header { gap: 15px; }
+    nav { flex-wrap: wrap; }
+    .card-container { grid-template-columns: 1fr; }
+}

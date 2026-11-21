@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum View</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">Quantum View</h1>
+
+        <nav>
+            <a href="#About" class="btns">About Us</a>
+            <a href="#Features" class="btns">Features</a>
+            <a href="#Buy" class="btns">Buy Stocks</a>
+            <a href="#Buy" class="btns">Sell Stocks</a>
+        </nav>
+    </header>
+    
+    <section class="wallet">
+        <h2>Your Portfolio (Round <span id="roundNum">1</span>)</h2>
+
+        <div class="portfolio-card">
+            <div>
+                <h3>Available Balance</h3>
+                <p id="balance">$1000.00</p>
+            </div>
+
+            <div>
+                <h3>Total Portfolio Value</h3>
+                <p id="total">$1000.00</p>
+            </div>
+
+            <div>
+                <h3>Total Stock Value</h3>
+                <p id="stotal">$0.00</p>
+            </div>
+
+            <div>
+                <h3>Total Number of Shares</h3>
+                <p id="sntotal">0</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="About">
+        <div class="card3">
+            <h2>About Us</h2>
+            <p>
+                Quantum View is a stock market where prices aren’t fixed. They react to what players buy and sell. Players try to make the most profit, but every decision changes the market for the next round..
+                So what are you waiting for ! Go trade and be the biggest winner of them all
+            </p>
+        </div>
+    </section>
+
+    <section id="Features">
+        <h2>Our Features</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Interactive Stock Trading</h3>
+                <p>
+                    Buy and sell shares of different companies
+                    using virtual money.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Market News</h3>
+                <p>
+                    Follow market updates and learn how news
+                    can affect stock prices.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio Tracking</h3>
+                <p>
+                    Monitor your balance, owned shares, and
+                    total portfolio value.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="Buy">
+        <h2>Stock Market</h2>
+
+        <div class="card-container">
+
+            <div class="stock-card">
+                <h3>ByteBurger</h3>
+                <p>Fast Food</p>
+                <h2>$20.00</h2>
+                <p>Owned: <span id="byteOwned">0</span></p>
+                <input type="number" id="byteQty" min="1" value="1">
+                <button onclick="trade('byte', 'buy')">Buy</button>
+                <button onclick="trade('byte', 'sell')">Sell</button>
+            </div>
+
+            <div class="stock-card">
+                <h3>GreenLeaf Farms</h3>
+                <p>Healthy Snacks</p>
+                <h2>$15.00</h2>
+                <p>Owned: <span id="greenOwned">0</span></p>
+                <input type="number" id="greenQty" min="1" value="1">
+                <button onclick="trade('green', 'buy')">Buy</button>
+                <button onclick="trade('green', 'sell')">Sell</button>
+            </div>
+
+            <div class="stock-card">
+                <h3>Zoomy Motors</h3>
+                <p>Electric Scooters</p>
+                <h2 id="priceofZoom">$40.00</h2>
+                <p>Owned: <span id="ZoomOwned">0</span></p>
+                <input type="number" id="ZoomQant" min="1" value="1">
+                <button onclick="trade('Zoomy', 'buy')">Buy</button>
+                <button onclick="trade('Zoomy', 'sell')">Sell</button>
+            </div>
+
+            <div class="stock-card">
+                <h3>PixelPlay Games</h3>
+                <p>Video Games</p>
+                <h2>$30.00</h2>
+                <p>Owned: <span id="pixelOwned">0</span></p>
+                <input type="number" id="pixelQty" min="1" value="1">
+                <button onclick="trade('PixelPlay', 'buy')">Buy</button>
+                <button onclick="trade('PixelPlay', 'sell')">Sell</button>
+            </div>
+
+            <div class="stock-card">
+                <h3>RocketRide</h3>
+                <p>Space Tourism</p>
+                <h2>$60.00</h2>
+                <p>Owned: <span id="rocketrOwned">0</span></p>
+                <input type="number" id="rocketrQant" min="1" value="1">
+                <button onclick="trade('rocket', 'buy')">Buy</button>
+                <button onclick="trade('rocket', 'sell')">Sell</button>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 15px;">
+            <button id="nextRoundBtn" onclick="nextRound()">End Round / Next Round</button>
+            <button id="newGameBtn" onclick="newGame()">New Game</button>
+        </div>
+    </section>
+
+    <section id="News">
+        <h2>Market News</h2>
+        <div class="card">
+            <p id="news">The market is open! Start trading.</p>
+        </div>
+    </section>
+
+    <section id="Ai">
+        <h2>Get AI overview</h2>
+        <div class="stock-card">
+            <button id="getai">Get AI overview of shares</button>
+            <p id="aiOverview"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Quantum view a project by Manas Jain, Shiven Maan and Allen Jijo.</p>
+    </footer>
+
+</body>
+</html>
